@@ -1,46 +1,28 @@
-# Incorporating Animal Movement Into Distance Sampling
+SUPPLEMENTARY MATERIALS FOR "INCORPORATING ANIMAL MOVEMENT INTO DISTANCE
+SAMPLING" 
+R. Glennie <rg374@st-andrews.ac.uk> 
 
-# Author Contributions Checklist Form
+The paper includes a simulation study (Figures 1 & 2 in paper) and a data analysis (Figures 3 & 4, Table 1 in paper). 
 
-## Data
+- The sub-directory "simulation_studies" contains two scripts: one to run the 
+line transect simulation study (line_simstudy.R) and one to run the point 
+transect simulation study (point_simstudy.R). Each script produces the 
+corresponding figure for the paper. 
 
-### Abstract
+- The sub-directory "spotted_application" provides the data and code to 
+reproduce the results presented in the paper for the case study. The 
+models are fit using script "01_spotted_fit_models.R", the predictions 
+for the table computed in "02_spotted_predict_by_year.R", and the table
+and figures produced in "03_spotted_table_and_figures.R". 
 
-Line transect survey of Pan-tropical Spotted Dolphins
+Below is the sessionInfo() of the R session used to reproduce the results. 
+In particular, the following R packages were used: 
+- moveds version 0.1.0 (included with the supplementary materials)
+- Distance version 0.9.8 (available from CRAN) 
+- ggplot2_3.2.1 (available from CRAN) 
 
-### Availability
-
-Data are provided by the Southwest Fisheries Science Center (SWFSC), National Oceanic and Atmospheric Administration (NOAA).
-
-### Description
-
-The data is provided in the supplementary materials.
-
-## Code
-
-### Abstract
-
-The code provided reproduces the methods applied in the paper including scripts to apply the methods to simulated data and to reproduce the simulation study results.
-
-### Description
-
-The code is provided in two ZIP files. One ZIP file contains an R package (moveds) to be installed. The second ZIP file uses this R package to show how the methods are applied and to reproduce the simulation studies. MIT License applies to all code.
-
-### Optional Information
-
-Code should run on any desktop computer with modest resources. The Description file within the R package details what dependencies must be installed to run the code.
-
-## Instructions for Use
-
-### Reproducibility 
-
-Please refer to the README provided in the supplementary material.
-
-### Replication 
-
-The package included contains vignettes that explain the implementation of the methods and show how to apply it to simulated data. Below is the version of R, version of R packages, and other system-specific information that was used when producing the results in the paper:
-
-```
+sessionInfo():
+==============================================
 R version 3.6.1 (2019-07-05)
 Platform: x86_64-pc-linux-gnu (64-bit)
 Running under: Ubuntu 18.04.3 LTS
@@ -75,4 +57,4 @@ loaded via a namespace (and not attached):
 [25] Matrix_1.2-17       purrr_0.3.2         glue_1.3.1         
 [28] compiler_3.6.1      pillar_1.4.2        scales_1.0.0       
 [31] truncnorm_1.0-8     pkgconfig_2.0.3 
-```
+
